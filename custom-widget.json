@@ -1,0 +1,92 @@
+{
+	"name": "radar2",
+	"description": "radar infor graphic",
+	"eula": "",
+	"vendor": "pwc-cz-ras",
+	"license": "",
+	"id": "radar2",
+	"newInstancePrefix": "radar2",
+	"version": "0.2.3",
+	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
+	"webcomponents": [
+        {
+			"kind": "main",
+			"tag": "pwc-radar-main",
+            "url": "https://radarwidget.s3.amazonaws.com/pwc-radar-main.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
+        },
+		{
+			"kind": "styling",
+			"tag": "pwc-radar-styling",
+            "url": "https://radarwidget.s3.amazonaws.com/pwc-radar-styling.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
+        },
+		{
+			"kind": "builder",
+			"tag": "pwc-radar-builder",
+            "url": "https://radarwidget.s3.amazonaws.com/pwc-radar-builder.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
+        }
+    ],
+	"properties": {
+		"newSegment": {
+			"type": "string",
+			"description": "..."
+		},
+		"backgroundColor": {
+			"type": "string",
+			"description": "...",
+			"default": "blue"
+		},
+		"segmentList": {
+			"type": "string",
+			"description": "...",
+			"default": "[{ \"label\": \"segment one\" },{ \"label\": \"segment two\" },{ \"label\": \"segment three\" }]"
+		},
+		"nodeList": {
+			"type": "string",
+			"description": "...",
+			"default": "[{ \"label\": \"segment one\", \"x\": 500, \"y\": 500, \"id\": \"radar-node-0\" }]"
+		}
+	},
+	"methods": {
+		"segmentListm": {
+			"description": "Get array of segments"
+		},
+		"addSegment": {
+			"description": "Create a new segment",
+			"parameters": [
+				{
+					"name": "label",
+					"type": "string",
+					"description": "name of the segment"
+				}
+			]
+		},
+		"removeSegment": {
+			"description": "remove segment",
+			"parameters": [
+				{
+					"name": "label",
+					"type": "string",
+					"description": "name of the segment"
+				}
+			]
+		},
+		"wtf": {
+			"description": "Create a new segment",
+			"parameters": [
+				{
+					"name": "label",
+					"type": "string",
+					"description": "name of the segment"
+				}
+			]
+		}
+	},
+	"events": {
+	}
+}
